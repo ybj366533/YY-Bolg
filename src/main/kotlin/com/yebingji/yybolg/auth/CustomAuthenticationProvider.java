@@ -39,6 +39,7 @@ public class CustomAuthenticationProvider implements AuthenticationProvider {
             user = userService.loadUserByUsername(username);
         }
         //
+        
         if (user == null) {
             throw new UsernameNotFoundException("用户名/密码无效");
         } else if (user.isEnabled()) {
